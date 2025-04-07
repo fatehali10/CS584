@@ -1,0 +1,74 @@
+openapi: 3.0.4
+info:
+  title: Table Extraction Service
+  version: 1.0.0
+servers:
+- url: /
+tags:
+- name: table_extract
+  description: Table Extraction
+paths:
+  /table_extract:
+    post:
+      tags:
+      - table_extract
+      summary: Upload a table image and get recognized result.
+      description: Upload a table image.
+      operationId: table_extract_post
+      parameters:
+        - name: mode
+          in: query
+          description: |-
+            - Detect: Table Detect given one page image.
+            - Recognize: Table Recognize given one table image.
+            - Extract: Table Detect + Recognize given one page image.
+          required: true
+          schema:
+            type: string
+            default: Recognize
+            enum:
+              - Detect
+              - Recognize
+              - Extract
+        - name: OCR
+          in: query
+          description: |-
+            - Tesseract OCR: Use Tesseract OCR to recgnize texts.
+            - Ground truth: Use ground truth texts.
+          required: true
+          schema:
+            type: string
+            default: Tesseract OCR
+            enum:
+              - Tesseract OCR
+              - Ground truth
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+              required:
+                - file
+          # application/octet-stream:
+          #   # image/png:
+          #   schema:
+          #     type: string
+          #     format: binary
+      responses:
+        "200":
+          description: successfully updated
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+                x-content-type: application/octet-stream
+        "400":
+          description: Invalid input
+      x-openapi-router-controller: swagger_server.controllers.table_extract_controller
+components:
+  schemas: {}
