@@ -51,8 +51,10 @@ cd /home/cc/team20/proj/git
 git clone https://github.com/fatehali10/CS584.git
 
 # Launch Server:
+# screen -S service
 # source /home/cc/team20/py310/bin/activate
 # cd /home/cc/team20/proj/git/CS584/frontend_code
 # python -m swagger_server
+# exit with keyboard: Ctrl+A+D
 # Client access:
 # http://192.5.87.132:8085/ui
