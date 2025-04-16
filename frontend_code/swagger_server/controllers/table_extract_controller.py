@@ -5,7 +5,7 @@ import sys
 from flask import send_file, request as flask_request
 
 from swagger_server import util
-sys.path.append("/home/cc/jiongjiong/proj/git/table-transformer/src")
+sys.path.append("/home/cc/team20/proj/git/table-transformer/src")
 from model_service import get_args, TableExtractModel
 
 
