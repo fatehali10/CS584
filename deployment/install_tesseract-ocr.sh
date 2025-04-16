@@ -23,4 +23,4 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/home/cc/team20/proj/leptonica_install/l
 ./configure --prefix=/home/cc/team20/proj/tesseract-ocr_install --with-extra-libraries=/home/cc/team20/proj/leptonica_install/lib
 make && make install
 
-wget -P /home/cc/team20/proj/tesseract-ocr_install/share/tessdata/ https://github.com/tesseract-ocr/tessdata_best/blob/main/eng.traineddata
+wget -P /home/cc/team20/proj/tesseract-ocr_install/share/tessdata/ https://github.com/tesseract-ocr/tessdata/raw/4.00/eng.traineddata
