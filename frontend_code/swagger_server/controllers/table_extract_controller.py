@@ -13,19 +13,19 @@ def create_model():
     dir_name_postfix = "service"
     input_args = [
         '--mode', 'extract',
-        '--image_dir', f'/home/cc/jiongjiong/data/processed_tiny_fintabnet/page_images/{dir_name_postfix}',
-        '--words_dir', f'/home/cc/jiongjiong/data/processed_tiny_fintabnet/ocr_results/{dir_name_postfix}',
-        '--out_dir', f'/home/cc/jiongjiong/inference_output_{dir_name_postfix}',
-        '--structure_config_path', '/home/cc/jiongjiong/proj/git/table-transformer/src/structure_config.json',
-        '--structure_model_path', '/home/cc/jiongjiong/models/TATR-v1.1-Fin-msft.pth',
-        '--detection_config_path', '/home/cc/jiongjiong/proj/git/table-transformer/src/detection_config.json',
-        '--detection_model_path', '/home/cc/jiongjiong/models/pubtables1m_detection_detr_r18.pth',
+        '--image_dir', f'/home/cc/team20/data/tiny_fintabnet_database/page_images/{dir_name_postfix}',
+        '--words_dir', f'/home/cc/team20/data/tiny_fintabnet_database/ocr_results/{dir_name_postfix}',
+        '--out_dir', f'/home/cc/team20/data/inference_output/{dir_name_postfix}',
+        '--structure_config_path', '/home/cc/team20/proj/git/table-transformer/src/structure_config.json',
+        '--structure_model_path', '/home/cc/team20/models/TATR-v1.1-Fin-msft.pth',
+        '--detection_config_path', '/home/cc/team20/proj/git/table-transformer/src/detection_config.json',
+        '--detection_model_path', '/home/cc/team20/models/pubtables1m_detection_detr_r18.pth',
         '--html',
         '--csv',
         '--objects',
         '--crops',
         '--visualize',
-        '--tesseract_cmd', '/home/cc/jiongjiong/tesseract_ocr/bin/tesseract'
+        '--tesseract_cmd', '/home/cc/team20/proj/tesseract-ocr_install/bin/tesseract'
     ]
 
     args = get_args(input_args)

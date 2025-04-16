@@ -50,6 +50,9 @@ wget -P /home/cc/team20/models https://huggingface.co/bsmock/TATR-v1.1-Fin/resol
 cd /home/cc/team20/proj/git
 git clone https://github.com/fatehali10/CS584.git
 
-source /home/cc/team20/py310/bin/activate
-cd /home/cc/team20/proj/git/CS584/frontend_code
-python -m swagger_server
+# Launch Server:
+# source /home/cc/team20/py310/bin/activate
+# cd /home/cc/team20/proj/git/CS584/frontend_code
+# python -m swagger_server
+# Client access:
+# http://192.5.87.132:8085/ui
