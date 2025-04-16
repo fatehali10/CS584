@@ -12,7 +12,7 @@ from model_service import get_args, TableExtractModel
 def create_model():
     dir_name_postfix = "service"
     input_args = [
-        '--use_ocr', True,
+        '--use_ocr',
         '--mode', 'extract',
         '--image_dir',             f'/home/cc/team20/data/tiny_fintabnet_database/page_images/{dir_name_postfix}',
         '--page_words_dir',        f'/home/cc/team20/data/tiny_fintabnet_database/FinTabNet.c_PDF_Annotations_JSON',
