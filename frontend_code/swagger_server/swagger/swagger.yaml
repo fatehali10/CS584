@@ -30,6 +30,18 @@ paths:
               - Detect
               - Recognize
               - Extract
+        - name: OCR
+          in: query
+          description: |-
+            - Tesseract OCR: Use Tesseract OCR to recgnize texts.
+            - Ground truth: Use ground truth texts.
+          required: true
+          schema:
+            type: string
+            default: Tesseract OCR
+            enum:
+              - Tesseract OCR
+              - Ground truth
       requestBody:
         content:
           multipart/form-data:
