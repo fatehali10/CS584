@@ -47,8 +47,8 @@ mkdir /home/cc/team20/models
 wget -P /home/cc/team20/models https://huggingface.co/bsmock/tatr-pubtables1m-v1.0/resolve/main/pubtables1m_detection_detr_r18.pth
 wget -P /home/cc/team20/models https://huggingface.co/bsmock/TATR-v1.1-Fin/resolve/main/TATR-v1.1-Fin-msft.pth
 
-cd /home/cc/team20/proj/git
-git clone https://github.com/fatehali10/CS584.git
+# cd /home/cc/team20/proj/git
+# git clone https://github.com/fatehali10/CS584.git
 
 # Launch Server:
 # screen -S service
